@@ -62,7 +62,30 @@ for(event in events){
     assign(paste('raw_data', event, sep = '_'), temp)
   }
 }
-  
+#Drop record with record_id 121
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='121')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='158')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='230')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='234')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='244')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='319')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='429')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='447')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='562')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='587')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='622')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='635')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='677')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='675')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='766')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='773')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='779')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='779')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='781')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='782')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='808')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='819')
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='765')
 
 write.table(raw_data_index_enrolment_arm_1, 'Data/Baseline.csv', sep = ",", row.names = FALSE)
 
@@ -70,8 +93,7 @@ write.table(raw_data_index_hhc_investig_arm_1, 'Data/HHCI.csv', sep = ",", row.n
 
 
 
-#Drop record with record_id 121
-raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='121')
+
 
 
 
