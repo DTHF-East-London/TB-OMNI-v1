@@ -61,27 +61,17 @@ for(event in events){
     temp$record_id <- as.numeric(temp$record_id)
     assign(paste('raw_data', event, sep = '_'), temp)
   }
-  
-  if(event=="household_level_da_arm_1"){
-    temp <- getREDCapRecords(event, forms, NULL, TRUE)
-    
-    if(event!="index_enrolment_arm_1"){
-      temp <- temp[-(5:100)]
-    }
-    
-    temp$record_id <- as.numeric(temp$record_id)
-    assign(paste('raw_data', event, sep = '_'), temp)
-  }
 }
-
+  
 
 write.table(raw_data_index_enrolment_arm_1, 'Data/Baseline.csv', sep = ",", row.names = FALSE)
 
 write.table(raw_data_index_hhc_investig_arm_1, 'Data/HHCI.csv', sep = ",", row.names = FALSE)
 
-write.table(raw_data_household_level_da_arm_1, 'Data/HH level Data.csv', sep = ",", row.names = FALSE)
 
 
+#Drop record with record_id 121
+raw_data_index_enrolment_arm_1<- subset(raw_data_index_enrolment_arm_1, raw_data_index_enrolment_arm_1$record_id!='121')
 
 
 
